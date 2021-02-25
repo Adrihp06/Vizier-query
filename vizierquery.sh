@@ -22,8 +22,8 @@ for DATASET in $vizier_dataset; do
 	ast_columns=$(echo $columns | tr -s ' ' ',')
 	if [ $(echo $ast_columns | tr -cd , | wc -c) -ge 2 ]
 	then
-		echo $DATASET
-		echo $ast_columns
+		#echo $DATASET
+		#echo $ast_columns
 		filename=$(echo $DATASET | tr -s '/' '_')
 		astquery vizier -h0 --dataset=$DATASET --output="$filename".fits --overlapwith=$2 -c $ast_columns
 	fi
