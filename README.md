@@ -6,6 +6,7 @@
  ----Program-----ucd filter---image----
  
 We started using a gnuastro tool objects info:
+
  'centerra=$(astfits -h0 $2 --skycoverage | grep "Center:" | awk '{print $2}')
 centerde=$(astfits -h0 $2 --skycoverage | grep "Center:" | awk '{print $3}')
 rad=$(astfits -h0 $2 --skycoverage | grep "Width:" | awk '{print $2}')'
